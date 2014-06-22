@@ -11,4 +11,9 @@
 </p>
 
 </div>
-
+<h3>Reviews:</h3>
+<div>
+  <% @restaurant.reviews.each do |review| %>
+    <p><%= review.rating %> - <%= review.body %></p>
+  <% end %>
+</div>

@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
   root 'restaurants#index'
-  resources :restaurants, only: [:index, :new, :show, :create] do
-    resources :reviews, only: [:new, :show, :create]
+
+  resources :restaurants do
+    resources :reviews
   end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
