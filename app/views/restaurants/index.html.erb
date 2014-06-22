@@ -1,17 +1,7 @@
 <h3>The Best Restaurants in Town</h3>
 
 <div>
-<% @restaurants.each do |restaurant| %>
-<h4><%= restaurant.name %></h4>
-
-<p>
-<%= restaurant.adress %>
-</p>
-<p>
-<%= restaurant.city%>" "<%= restaurant.state %>", "<%= restaurant.zipcode%>
-</p>
-<% end %>
+  <% @restaurants.each do |restaurant| %>
+    <h4><a href="restaurants/<%=restaurant.id%>"><%= restaurant.name %></a> - <%= restaurant.address %> </h4>
+  <% end %>
 </div>
-
-
-
