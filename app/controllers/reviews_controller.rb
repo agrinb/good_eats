@@ -5,13 +5,15 @@ class ReviewsController < ApplicationController
   end
 
   def new
-   @restaurant = Restaurant.find(params[:id])
-    @review = @restaurant.review.new
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @review = Review.new
+    @ratings = Rating.all
     # @review = Review.new(@restaurant)
     # @restaurant = Restaurant.find(params[:restaurant_id])
   end
 
   def create
+    binding.pry
     @restaurant = Restaurant.find(params[:restaurant_id])
     @review = Review.new(review_params)
     @review.restaurant_id = @restaurant.id
