@@ -13,7 +13,6 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    binding.pry
     @restaurant = Restaurant.find(params[:restaurant_id])
     @review = Review.new(review_params)
     @review.restaurant_id = @restaurant.id

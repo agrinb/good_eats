@@ -10,10 +10,13 @@
 <%= @restaurant.city%> <%= @restaurant.state %>, <%= @restaurant.zipcode%>
 </p>
 
+
 </div>
-<h3>Reviews:</h3>
-<div>
-  <% @restaurant.reviews.each do |review| %>
-    <p><%= review.rating %> - <%= review.body %></p>
-  <% end %>
+<% if !@restaurant.reviews.empty? %>
+  <h3>Reviews:</h3>
+  <div>
+    <% @restaurant.reviews.each do |review| %>
+      <p><%= review.rating %> - <%= review.body %></p>
+    <% end %>
+<% end %>
 </div>
