@@ -1,7 +1,8 @@
 class RestaurantsController < ApplicationController
 
   def index
-    @restaurants = Restaurant.all
+
+    @restaurants = Restaurant.paginate(:page => params[:page], :per_page => 10)
   end
 
   def new
@@ -27,6 +28,6 @@ class RestaurantsController < ApplicationController
   private
 
   def restaurant_params
-    params.require(:restaurant).permit(:name, :address, :city, :state, :zipcode, reviews_attributes: [:rating, :body])
+    params.require(:restaurant).permit(:name, :address, :city, :state, :zipcode, reviews_attributes: [:rating, :body, :id])
   end
 end

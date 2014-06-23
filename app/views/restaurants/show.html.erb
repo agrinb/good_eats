@@ -13,10 +13,11 @@
 
 </div>
 <% if !@restaurant.reviews.empty? %>
+
   <h3>Reviews:</h3>
   <div>
     <% @restaurant.reviews.each do |review| %>
-      <p><%= review.rating %> - <%= review.body %></p>
+      <p><%= review.review_value %>- <%= review.body %></p>
     <% end %>
 <% end %>
 </div>

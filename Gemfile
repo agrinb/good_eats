@@ -6,6 +6,7 @@ gem 'rails', '4.1.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 gem 'pry-rails', '~> 0.3.2'
+gem 'will_paginate', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets

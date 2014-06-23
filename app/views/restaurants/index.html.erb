@@ -5,3 +5,5 @@
     <h4><a href="restaurants/<%=restaurant.id%>"><%= restaurant.name %></a> - <%= restaurant.address %> </h4>
   <% end %>
 </div>
+
+<%= will_paginate @restaurants %>
