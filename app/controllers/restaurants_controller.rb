@@ -6,7 +6,9 @@ class RestaurantsController < ApplicationController
   end
 
   def new
+    binding.pry
     @restaurant = Restaurant.new
+
   end
 
   def show

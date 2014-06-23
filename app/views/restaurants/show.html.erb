@@ -20,4 +20,8 @@
       <p><%= review.review_value %>- <%= review.body %></p>
     <% end %>
 <% end %>
+
 </div>
+
+<%= link_to "Add a review for #{@restaurant.name}", new_restaurant_review_path(@restaurant) %>
+
